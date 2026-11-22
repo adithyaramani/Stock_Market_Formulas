@@ -54,3 +54,20 @@ This model follows a series of assumptions. (Its these assumptions that make the
 
 By inputing the factors in the formula, the value of the options cam be derived. The model makes options less of a gamble as it gives it a mathematical value. It assumes that stock prices follow a logonormal distribution as asset prices cannpot be negative as its bound by 0. 
 
+
+# Sharpe Ratio
+It is a ratio developed by William F. Sharpe
+This ratio has become the Industry standard
+It is used to calculate the risk-adjusted return
+Sharpe Ratio = (Expected Portfolio return - Risk-free rate of return / Portfolio standard deviation)
+The Risk-free return could be understood as the return when money is invested in banks or government bonds or treasury bills, where the returns are not high but safety of funds is ensured. In markets, this rate is approximately 0 (😂😂😂). To be more precise, inflation rate is more than the bank interest rate, which means that our money in banks is losing value over time
+
+# Annualizing Sharpe ratio
+To annualize the Sharpe ratio, we need to multiple the Sharpe ratio by the K-factor.
+Annualised Sharpe Ratio (ASR) = K * Sharpe Ratio (SR)
+Daily = sqrt(252) (There are only 252 business days)
+Weekly = sqrt(52)
+Montlhy = sqrt(12)
+Yearly = sqrt(1) (This is as good as doing nothing 😜, as SR is basically a yearly figure)
+
+
