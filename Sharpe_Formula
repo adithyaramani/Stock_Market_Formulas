@@ -1,0 +1,15 @@
+print('The below is the code to get the sharpe ratio')
+#The scrips can be designed as per the portfolio composition
+#The related charts can be drawn using Matplotlib
+
+#This is done to get the closing price of each stock
+aapl['aapl'] = aapl.Close.pct_change()
+cisco['cisco'] = cisco.Close.pct_change()
+ibm['ibm'] = ibm.Close.pct_change()
+
+all pos = [aapl['position'], cisco['position'], ibm['position']]
+portf_val = pd.concat(all_pos, axis=1)
+portf_val['Total Pos'] =portf_val.sum(axis=1)
+portf_val['Daily Return'] = portf_val['Total Pos'].pct_change(1)
+Sharpe_Ratio = portf_val['Daily Return'].mean()/portf_val['Daily_Return'].std()
+A_Sharpe_Ratio = (252**.05) * Sharpe_Ratio
